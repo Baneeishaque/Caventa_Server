@@ -1,0 +1,40 @@
+language: node_js
+node_js:
+    - "8.8.1"
+
+env:
+  global:
+#     - "FTP_USER=root@filebooker.com"        
+    - "FTP_USER=ndk@vfmob.com.md-in-64.webhostbox.net"
+    - "FTP_PASSWORD=9895204814"
+  
+# Speed up building using Cache
+# cache:
+  # directories:
+    # - node_modules
+ 
+notifications:
+  email:
+    - baneeishaque@gmail.com
+
+install:
+  - npm install newman
+
+# before_script:
+  # - node --version
+  # - npm --version
+  # - node_modules/.bin/newman --version
+
+script:
+    - node_modules/.bin/newman run postman_tests/Lottery.postman_collection.json --reporters html,cli,json,junit --reporter-json-export --reporter-html-export --reporter-junit-export -e postman_tests/Lottery.postman_environment.json
+  
+after_success:
+    # - ls ${TRAVIS_BUILD_DIR}/${DIR}/newman
+    
+    # - FILES=${TRAVIS_BUILD_DIR}/${DIR}/newman/*
+    # - echo $FILES
+    # - for file in $FILES; do cat $file; done
+    # - for file in $FILES; do curl --ftp-create-dirs -T $file -u $FTP_USER:$FTP_PASSWORD ftp://208.91.198.16/lottery2/builds/travis/; done
+    
+    - find ${TRAVIS_BUILD_DIR}/${DIR}/newman/ -exec curl -u $FTP_USER:$FTP_PASSWORD --ftp-create-dirs -T {} ftp://vfmob.com.md-in-64.webhostbox.net/baneeishaque/lottery_production/builds/travis/newman/ \;
+    

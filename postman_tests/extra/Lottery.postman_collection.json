@@ -1,0 +1,509 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Lottery",
+		"_postman_id": "e8cca239-8e3b-987f-7a00-4d86e7cca4da",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "{{Lottery_API_URL}}get_admin_login.php",
+			"request": {
+				"url": "{{Lottery_API_URL}}get_admin_login.php",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "srf",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "744",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "{{Lottery_API_URL}}get_agent_login.php",
+			"request": {
+				"url": "{{Lottery_API_URL}}get_agent_login.php",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "ban",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "987",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "{{Lottery_API_URL}}get_result_day.php",
+			"request": {
+				"url": "{{Lottery_API_URL}}get_result_day.php",
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "{{Lottery_API_URL}}get_payment.php",
+			"request": {
+				"url": "{{Lottery_API_URL}}get_payment.php",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "start_date",
+							"value": "2017-09-05",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "end_date",
+							"value": "2017-09-05",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "agent",
+							"value": "ban",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "{{Lottery_API_URL}}get_payment_new.php",
+			"request": {
+				"url": "{{Lottery_API_URL}}get_payment_new.php",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "start_date",
+							"value": "2017-09-02",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "end_date",
+							"value": "2017-09-10",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "agent",
+							"value": "ban",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "{{Lottery_API_URL}}get_payment_old.php",
+			"request": {
+				"url": "{{Lottery_API_URL}}get_payment_old.php",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "start_date",
+							"value": "2017-09-02",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "end_date",
+							"value": "2017-09-10",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "agent",
+							"value": "ban",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "{{Lottery_API_URL}}get_payment.php",
+			"request": {
+				"url": "{{Lottery_API_URL}}get_payment.php",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "start_date",
+							"value": "2017-08-16",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "end_date",
+							"value": "2017-08-16",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "agent",
+							"value": "ban",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "{{Lottery_API_URL}}get_win.php",
+			"request": {
+				"url": "{{Lottery_API_URL}}get_win.php",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "start_date",
+							"value": "2017-08-13",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "end_date",
+							"value": "2017-08-16",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "agent",
+							"value": "ban",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "{{Lottery_API_URL}}get_sale_scheme_serial_count.php",
+			"request": {
+				"url": "{{Lottery_API_URL}}get_sale_scheme_serial_count.php",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "date",
+							"value": "2017-08-24",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "scheme",
+							"value": "LSK",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "{{Lottery_API_URL}}get_result_day.php",
+			"request": {
+				"url": "{{Lottery_API_URL}}get_result_day.php",
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "{{Lottery_API_URL}}get_sale.php",
+			"request": {
+				"url": "{{Lottery_API_URL}}get_sale.php",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "start_date",
+							"value": "2017-10-22",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "end_date",
+							"value": "2017-10-22",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "agent",
+							"value": "ban",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "{{Lottery_API_URL}}get_payment_upto_today.php",
+			"request": {
+				"url": "{{Lottery_API_URL}}get_payment_upto_today.php",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "agent",
+							"value": "rap",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "{{Lottery_API_URL}}get_agents.php",
+			"request": {
+				"url": "{{Lottery_API_URL}}get_agents.php",
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "{{Lottery_API_URL}}get_agent_login_new.php",
+			"request": {
+				"url": "{{Lottery_API_URL}}get_agent_login_new.php",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "ban",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "989",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "{{Lottery_API_URL}}username_check.php",
+			"request": {
+				"url": "{{Lottery_API_URL}}username_check.php",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "srf",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "{{Lottery_API_URL}}get_report_by_date.php",
+			"request": {
+				"url": "{{Lottery_API_URL}}get_report_by_date.php",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "start_date",
+							"value": "2017-08-26",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "end_date",
+							"value": "2017-09-02",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "{{Lottery_API_URL}}get_report_by_agent.php",
+			"request": {
+				"url": "{{Lottery_API_URL}}get_report_by_agent.php",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "agent",
+							"value": "ban",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "{{Lottery_API_URL}}agent_passcode_change.php",
+			"request": {
+				"url": "{{Lottery_API_URL}}agent_passcode_change.php",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "passcode",
+							"value": "756",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Agent Login New",
+			"request": {
+				"url": "{{Lottery_API_URL}}get_agent_login_new.php",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "ban",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "987",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Version",
+			"request": {
+				"url": "{{Lottery_API_URL}}get_version.php",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "flavour",
+							"value": "master",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
