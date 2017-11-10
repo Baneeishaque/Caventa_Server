@@ -2,36 +2,22 @@
 
 include_once 'config.php';
 
-$status_sql = "SELECT `system_status`, `version_code`, `version_name` FROM `configuration`";
+$sales_person_id = filter_input(INPUT_POST, 'sales_person_id');
+
+$status_sql = "SELECT `id`, `name`, `address`, `work_date`, `status`, `sales_person_id` FROM `works` WHERE `sales_person_id`=$sales_person_id";
+
 $status_result = $con->query($status_sql);
-$status_row = mysqli_fetch_assoc($status_result);
 
 $emptyarray = array();
 
-if ($status_row['system_status'] == "1") {
-    
-//    echo $status_row['system_status'];
-//    $emptyarray[] = array('system_status' => "1");
+if (mysqli_num_rows($status_result) != 0) {
+    array_push($emptyarray, array("status" => "0"));
 
-//    $flavour = filter_input(INPUT_POST, 'flavour');
-//
-//    if ($flavour == "master") {
-//        $sql = "SELECT `version_code`, `version_name` FROM `admin_configuration`";
-//    } else if ($flavour == "pos") {
-//        $sql = "SELECT `version_code`, `version_name` FROM `client_configuration`";
-//    }
-
-//    $sql = "SELECT `version_code`, `version_name` FROM `configuration`";
-//    $result = $con->query($sql);
-//
-//    while ($row = mysqli_fetch_assoc($result)) {
-//        $emptyarray[] = $row;
-//    }
-    
-    $emptyarray[] = $status_row;
-    
+    while ($status_row = mysqli_fetch_assoc($status_result)) {
+        $emptyarray[] = $status_row;
+    }
 } else {
-    $emptyarray[] = array('system_status' => "0");
+    array_push($emptyarray, array("status" => "1"));
 }
 
 echo json_encode($emptyarray);
