@@ -23,7 +23,7 @@ if (!$con->query($status_update_sql)) {
 
     if ($get_profit_row['sales_person_id'] == 1) {
 
-        $insert_profit_query_caventa = "INSERT INTO `work_profits`(`work_id`, `amount`, `sales_person_id`) VALUES ($work_id," . $get_profit_row['profit'] . ",1)";
+        $insert_profit_query_caventa = "INSERT INTO `work_profits`(`work_id`, `amount`, `sales_person_id`,`insertion_date_time`) VALUES ($work_id," . $get_profit_row['profit'] . ",1,CONVERT_TZ(NOW(),'-05:30','+00:00'))";
 
         if (!$con->query($insert_profit_query_caventa)) {
             $arr = array('status' => "1", 'error' => $con->error);
@@ -33,8 +33,8 @@ if (!$con->query($status_update_sql)) {
         }
     } else {
 
-        $insert_profit_query_sales_person = "INSERT INTO `work_profits`(`work_id`, `amount`, `sales_person_id`) VALUES ($work_id," . ($get_profit_row['profit'] * 0.6) . "," . $get_profit_row['sales_person_id'] . ")";
-        $insert_profit_query_caventa = "INSERT INTO `work_profits`(`work_id`, `amount`, `sales_person_id`) VALUES ($work_id," . ($get_profit_row['profit'] * 0.4) . ",1)";
+        $insert_profit_query_sales_person = "INSERT INTO `work_profits`(`work_id`, `amount`, `sales_person_id`,`insertion_date_time`) VALUES ($work_id," . ($get_profit_row['profit'] * 0.6) . "," . $get_profit_row['sales_person_id'] . ",CONVERT_TZ(NOW(),'-05:30','+00:00'))";
+        $insert_profit_query_caventa = "INSERT INTO `work_profits`(`work_id`, `amount`, `sales_person_id`,`insertion_date_time`) VALUES ($work_id," . ($get_profit_row['profit'] * 0.4) . ",1,CONVERT_TZ(NOW(),'-05:30','+00:00'))";
 
         if (!$con->query($insert_profit_query_sales_person)) {
             $arr = array('status' => "1", 'error' => $con->error);
