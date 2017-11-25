@@ -1,8 +1,5 @@
 <?php
 
-//TODO : Add payment clear to agent addition
-//TODO : Add agent_money table and avoid while loop
-
 include_once 'config.php';
 
 $agent = filter_input(INPUT_POST, 'agent');
