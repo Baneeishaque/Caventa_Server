@@ -13,7 +13,7 @@ include_once 'config.php';
 
 
 $status_sql = "SELECT CONCAT(works.name,\" commision\") AS particulars, amount,work_profits.insertion_date_time FROM work_profits,sales_persons,works WHERE sales_persons.id=work_profits.sales_person_id AND works.id=work_id AND work_profits.sales_person_id!=1 UNION ALL SELECT CONCAT(works.name,\":Advance:\",description) AS particulars, amount, works.insertion_date_time FROM work_advances,works WHERE works.id=work_advances.work_id UNION ALL SELECT CONCAT(works.name,\":Expense:\",description) AS particulars, amount, works.insertion_date_time FROM work_expenses,works WHERE works.id=work_expenses.work_id ORDER BY insertion_date_time DESC";
-
+ 
 $status_result = $con->query($status_sql);
 
 $emptyarray = array();
