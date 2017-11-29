@@ -9,7 +9,7 @@ $intrest = filter_input(INPUT_POST, 'intrest');
 $remarks = filter_input(INPUT_POST, 'remarks');
 // $sql = "INSERT INTO `works`(`name`, `address`, `work_date`,`insertion_date_time`, `sales_person_id`) VALUES ('$work_name','$work_address','$work_date',CONVERT_TZ(NOW(),'-05:30','+00:00'),$sales_person_id)";
 //$sql="INSERT INTO `investments`( `insertion_date_time`, `description`, `amount`) VALUES (CONVERT_TZ(NOW(),'-05:30','+00:00'),'$description',$amount)";
-$sql="INSERT INTO `loan_installments`(`loan_id`, `insertion_date_time`, `receipt_number`, `payed_amount`, `principle`, `intrest`, `remarks`) VALUES ($loan_id,CONVERT_TZ(NOW(),'-05:30','+00:00'),$receipt_number,$payed_amount,$principle,$intrest,$remarks)";
+$sql="INSERT INTO `loan_installments`(`loan_id`, `insertion_date_time`, `receipt_number`, `payed_amount`, `principle`, `intrest`, `remarks`) VALUES ($loan_id,CONVERT_TZ(NOW(),'-05:30','+00:00'),$receipt_number,$payed_amount,$principle,$intrest,'$remarks')";
 //$bill_id_query = "SELECT MAX(id) AS id from works";
 //$bill_no_result = $con->query($bill_id_query);
 //
